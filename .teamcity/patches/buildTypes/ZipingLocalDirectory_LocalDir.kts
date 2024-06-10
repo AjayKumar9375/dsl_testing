@@ -2,6 +2,7 @@ package patches.buildTypes
 
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.BuildType
+import jetbrains.buildServer.configs.kotlin.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.ui.*
 
 /*
@@ -12,5 +13,12 @@ in the project with id = 'ZipingLocalDirectory', and delete the patch script.
 create(RelativeId("ZipingLocalDirectory"), BuildType({
     id("ZipingLocalDirectory_LocalDir")
     name = "local_dir"
+
+    steps {
+        script {
+            id = "simpleRunner"
+            scriptContent = """Compress-Archive -Path D:\Class_7\Our_Environment\* -DestinationPath .\my_archive.zip"""
+        }
+    }
 }))
 
