@@ -17,7 +17,7 @@ object JsonDirectory_Build : BuildType({
         param("destination", "json_destination.json")
         param("location2", "Bsc")
         param("source", "json_source.json")
-        param("location8", "PlantModel")
+        param("location1", "PlantModel")
     }
 
     vcs {
