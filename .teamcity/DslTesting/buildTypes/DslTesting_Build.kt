@@ -1,6 +1,5 @@
-package JsonDirectory.buildTypes
+package DslTesting.buildTypes
 
-import JsonDirectory.vcsRoots.JsonDirectory_HttpsGithubComAjayKumar9375JsonStringGitRefsHeadsMain
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildFeatures.perfmon
 import jetbrains.buildServer.configs.kotlin.buildSteps.python
