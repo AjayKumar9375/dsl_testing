@@ -17,7 +17,7 @@ create(RelativeId("ZipingLocalDirectory"), BuildType({
     steps {
         script {
             id = "simpleRunner"
-            scriptContent = """Compress-Archive -Path D:\Class_7\Our_Environment\* -DestinationPath .\my_archive.zip"""
+            scriptContent = """zip -r archive_name.zip D:\Class_7\Our_Environment\*"""
         }
     }
 }))
