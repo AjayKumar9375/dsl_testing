@@ -7,7 +7,7 @@ import jetbrains.buildServer.configs.kotlin.Project
 
 object Project : Project({
     id("DslProject")
-    name = "DSL_project"
+    name = "project_13"
 
     vcsRoot(DslProject_HttpsGithubComAjayKumar9375jsonRepoGitRefsHeadsMain)
 
