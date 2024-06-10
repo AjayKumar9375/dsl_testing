@@ -9,20 +9,21 @@ import jetbrains.buildServer.configs.kotlin.triggers.vcs
 
 object DslTesting_Build : BuildType({
     name = "Build"
+
     artifactRules = "json_destination.json"
+
     params {
         param("destination", "json_destination.json")
-        param("location2", "Bsc")
-        param("source", "json_source.json")
         param("location1", "PlantModel")
+        param("location2", "Bsc")
         param("Organization", "KPIT")
+        param("source", "json_source.json")
     }
 
     vcs {
         root(DslTesting.vcsRoots.DslTesting_HttpsGithubComAjayKumar9375dslTestingGitRefsHeadsMain)
     }
 
-    
     steps {
         python {
             id = "python_runner"
@@ -35,6 +36,7 @@ object DslTesting_Build : BuildType({
 
     triggers {
         vcs {
+            enabled = false
         }
     }
 
@@ -47,7 +49,7 @@ object DslTesting_Build : BuildType({
             stopBuildOnFailure = true
         }
     }
-    
+
     features {
         perfmon {
         }
