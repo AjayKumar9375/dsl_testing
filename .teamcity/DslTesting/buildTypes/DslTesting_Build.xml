@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="b8913df4-76a8-4f3d-9b97-43b6aa3d5c02" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2021.1/project-config.xsd">
+  <name>Build</name>
+  <description />
+  <settings>
+    <parameters />
+    <build-runners />
+    <vcs-settings>
+      <vcs-entry-ref root-id="DslTesting_HttpsGithubComAjayKumar9375dslTestingGitRefsHeadsMain" />
+    </vcs-settings>
+    <requirements />
+    <build-triggers>
+      <build-trigger id="TRIGGER_8" type="vcsTrigger">
+        <parameters>
+          <param name="branchFilter" value="+:*" />
+          <param name="enableQueueOptimization" value="true" />
+          <param name="quietPeriodMode" value="DO_NOT_USE" />
+        </parameters>
+      </build-trigger>
+    </build-triggers>
+    <build-extensions>
+      <extension id="perfmon" type="perfmon">
+        <parameters>
+          <param name="teamcity.perfmon.feature.enabled" value="true" />
+        </parameters>
+      </extension>
+    </build-extensions>
+    <cleanup />
+  </settings>
+</build-type>
+
