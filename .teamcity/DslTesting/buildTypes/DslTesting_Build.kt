@@ -18,11 +18,32 @@ object DslTesting_Build : BuildType({
         root(DslTesting.vcsRoots.DslTesting_HttpsGithubComAjayKumar9375dslTestingGitRefsHeadsMain)
     }
 
+    
+    steps {
+        python {
+            id = "python_runner"
+            command = file {
+                filename = "main.py"
+                scriptArguments = "--path_to_source_json_file %source% --path_to_destination_json_file %destination% --location_one %location1% --location_two %location2%"
+            }
+        }
+    }
+
     triggers {
         vcs {
         }
     }
 
+    failureConditions {
+        failOnText {
+            conditionType = BuildFailureOnText.ConditionType.CONTAINS
+            pattern = "Key not found"
+            failureMessage = "Key didn't match"
+            reverse = false
+            stopBuildOnFailure = true
+        }
+    }
+    
     features {
         perfmon {
         }
