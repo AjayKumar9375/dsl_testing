@@ -9,9 +9,9 @@ object ImportingElements_SearchValue : BuildType({
 
     params {
         param("destination", "json_destination.json")
+        param("location1", """InputArtif\\PAnimalModel""")
         param("location2", "")
         param("source", "Json_source.json")
-        param("value_input", """InputArtif\\PAnimalModel""")
     }
 
     vcs {
