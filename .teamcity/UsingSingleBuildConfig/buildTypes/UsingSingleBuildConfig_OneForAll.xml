@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2021.1/project-config.xsd">
+  <name>one_for_all</name>
+  <description />
+  <settings>
+    <parameters>
+      <param name="project_file_name" value="" spec="text label='Project file name' display='prompt' validationMode='not_empty'" />
+      <param name="repository" value="" spec="text label='Repository name' display='prompt' validationMode='not_empty'" />
+      <param name="solution" value="" spec="text label='Project solution file name' display='prompt' validationMode='not_empty'" />
+    </parameters>
+    <build-runners />
+    <vcs-settings>
+      <vcs-entry-ref root-id="UsingSingleBuildConfig_HttpsGithubComAjayKumar9375ciCdDemoGit" />
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+
