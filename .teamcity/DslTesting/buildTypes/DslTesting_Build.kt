@@ -14,7 +14,7 @@ object DslTesting_Build : BuildType({
         param("location2", "Bsc")
         param("source", "json_source.json")
         param("location1", "PlantModel")
-        param("Organization", "KPIT")
+        param("Organization", "KPIT123")
     }
 
     vcs {
