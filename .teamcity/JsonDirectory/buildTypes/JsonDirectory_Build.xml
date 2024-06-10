@@ -8,7 +8,7 @@
     </options>
     <parameters>
       <param name="destination" value="json_destination.json" />
-      <param name="location1" value="PlantModel" />
+      <param name="location8" value="PlantModel" />
       <param name="location2" value="Bsc" />
       <param name="source" value="json_source.json" />
     </parameters>
