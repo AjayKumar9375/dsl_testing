@@ -1,5 +1,1 @@
-mkdir .teamcity
-cp -r path/to/generated/settings/* .teamcity/
-git add .teamcity
-git commit -m "Initial commit of TeamCity settings in Kotlin format"
-git push origin your-branch
+
