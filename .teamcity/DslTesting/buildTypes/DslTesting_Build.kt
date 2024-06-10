@@ -8,7 +8,7 @@ import jetbrains.buildServer.configs.kotlin.failureConditions.BuildFailureOnText
 import jetbrains.buildServer.configs.kotlin.failureConditions.failOnText
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
 
-object JsonDirectory_Build : BuildType({
+object DslTesting_Build : BuildType({
     name = "Build"
 
     artifactRules = "json_destination.json"
