@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="d8d10059-0e4e-44ce-903a-996c4bdb0e11" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2021.1/project-config.xsd">
-  <name>Importing_elements</name>
-  <parameters />
-  <cleanup />
-</project>
-
