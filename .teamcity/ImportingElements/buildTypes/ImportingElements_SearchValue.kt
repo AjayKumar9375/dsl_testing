@@ -22,8 +22,8 @@ object ImportingElements_SearchValue : BuildType({
         python {
             id = "python_runner"
             command = file {
-                filename = "search3.py"
-                scriptArguments = "--path_to_source_json_file %source% --path_to_destination_json_file %destination% --location_to_be_searched %value_input%"
+                filename = "main.py"
+                scriptArguments = "--path_to_source_json_file %source% --path_to_destination_json_file %destination% --location_one %location1% --location_two %location2%"
             }
         }
     }
