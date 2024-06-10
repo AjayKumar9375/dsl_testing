@@ -9,6 +9,7 @@ import jetbrains.buildServer.configs.kotlin.triggers.vcs
 
 object DslTesting_Build : BuildType({
     name = "Build"
+    artifactRules = "json_destination.json"
     params {
         param("destination", "json_destination.json")
         param("location2", "Bsc")
