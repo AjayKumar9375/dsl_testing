@@ -35,6 +35,7 @@ object JsonDirectory_Build : BuildType({
         script {
             id = "simpleRunner"
             scriptContent = "unzip"
+            formatStderrAsError = true
         }
     }
 
