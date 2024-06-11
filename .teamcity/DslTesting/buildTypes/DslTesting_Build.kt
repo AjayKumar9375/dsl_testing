@@ -91,9 +91,9 @@ object package_build : BuildType({
         }
     }
 
-    dependencies{
-        snapshot(DslTesting_Build){}
-    }
+    // dependencies{
+    //     snapshot(DslTesting_Build){}
+    // }
 
     failureConditions {
         failOnText {

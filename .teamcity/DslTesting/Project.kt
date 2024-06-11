@@ -13,4 +13,9 @@ object Project : Project({
 
     buildType(DslTesting_Build)
     buildType(package_build)
+
+    sequential {
+        buildType(DslTesting_Build)
+        buildType(package_build)
+    }
 })
