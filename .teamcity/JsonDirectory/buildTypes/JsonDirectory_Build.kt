@@ -40,6 +40,7 @@ object JsonDirectory_Build : BuildType({
             formatStderrAsError = true
         }
         maven {
+            name = "This is maven project"
             id = "Maven2"
             jdkHome = "%env.JDK_22_0%"
         }
