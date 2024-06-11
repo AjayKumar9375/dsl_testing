@@ -3,6 +3,7 @@ package JsonDirectory.buildTypes
 import JsonDirectory.vcsRoots.JsonDirectory_HttpsGithubComAjayKumar9375JsonStringGitRefsHeadsMain
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildSteps.python
+import jetbrains.buildServer.configs.kotlin.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.failureConditions.BuildFailureOnText
 import jetbrains.buildServer.configs.kotlin.failureConditions.failOnText
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
@@ -30,6 +31,10 @@ object JsonDirectory_Build : BuildType({
                 filename = "main.py"
                 scriptArguments = "--path_to_source_json_file %source% --path_to_destination_json_file %destination% --location_one %location1% --location_two %location2%"
             }
+        }
+        script {
+            id = "simpleRunner"
+            scriptContent = "unzip"
         }
     }
 
