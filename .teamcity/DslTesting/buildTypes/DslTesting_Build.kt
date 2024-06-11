@@ -40,6 +40,64 @@ object DslTesting_Build : BuildType({
         }
     }
 
+    dependencies{
+
+    }
+
+    failureConditions {
+        failOnText {
+            conditionType = BuildFailureOnText.ConditionType.CONTAINS
+            pattern = "Key not found"
+            failureMessage = "Key didn't match"
+            reverse = false
+            stopBuildOnFailure = true
+        }
+    }
+
+    features {
+        perfmon {
+        }
+    }
+})
+
+
+object package : BuildType({
+    name = "package"
+
+    artifactRules = "json_destination.json"
+
+    params {
+        param("destination", "json_destination.json")
+        param("location1", "PlantModel")
+        param("location2", "Bsc")
+        param("Organization", "KPIT")
+        param("source", "json_source.json")
+    }
+
+    vcs {
+        root(DslTesting.vcsRoots.DslTesting_HttpsGithubComAjayKumar9375dslTestingGitRefsHeadsMain)
+    }
+
+    steps {
+        python {
+            id = "python_runner"
+            command = file {
+                filename = "main.py"
+                scriptArguments = "--path_to_source_json_file %source% --path_to_destination_json_file %destination% --location_one %location1% --location_two %location2%"
+            }
+        }
+    }
+
+    triggers {
+        vcs {
+            // branchFilter = ".*"
+        }
+    }
+
+    dependencies{
+        snapshot(DslTesting_Build)
+    }
+
     failureConditions {
         failOnText {
             conditionType = BuildFailureOnText.ConditionType.CONTAINS
