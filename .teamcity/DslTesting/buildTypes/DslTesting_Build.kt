@@ -37,7 +37,6 @@ object DslTesting_Build : BuildType({
     triggers {
         vcs {
             enabled = false
-            branchFilter = ".*"
         }
     }
 
