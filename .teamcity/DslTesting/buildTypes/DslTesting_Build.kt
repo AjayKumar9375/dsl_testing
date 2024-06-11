@@ -92,7 +92,7 @@ object package_build : BuildType({
     }
 
     dependencies{
-        snapshot(DslTesting_Build)
+        snapshot(DslTesting_Build){}
     }
 
     failureConditions {
