@@ -2,6 +2,7 @@ package JsonDirectory.buildTypes
 
 import JsonDirectory.vcsRoots.JsonDirectory_HttpsGithubComAjayKumar9375JsonStringGitRefsHeadsMain
 import jetbrains.buildServer.configs.kotlin.*
+import jetbrains.buildServer.configs.kotlin.buildSteps.maven
 import jetbrains.buildServer.configs.kotlin.buildSteps.python
 import jetbrains.buildServer.configs.kotlin.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.failureConditions.BuildFailureOnText
@@ -37,6 +38,10 @@ object JsonDirectory_Build : BuildType({
             enabled = false
             scriptContent = "unzip"
             formatStderrAsError = true
+        }
+        maven {
+            id = "Maven2"
+            jdkHome = "%env.JDK_22_0%"
         }
     }
 
