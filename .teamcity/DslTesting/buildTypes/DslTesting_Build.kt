@@ -58,7 +58,7 @@ object DslTesting_Build : BuildType({
 })
 
 
-object package : BuildType({
+object package_build : BuildType({
     name = "package"
 
     artifactRules = "json_destination.json"
