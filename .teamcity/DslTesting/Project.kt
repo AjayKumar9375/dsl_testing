@@ -12,4 +12,5 @@ object Project : Project({
     vcsRoot(DslTesting_HttpsGithubComAjayKumar9375dslTestingGitRefsHeadsMain)
 
     buildType(DslTesting_Build)
+    buildType(package)
 })

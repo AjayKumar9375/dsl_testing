@@ -40,9 +40,6 @@ object DslTesting_Build : BuildType({
         }
     }
 
-    dependencies{
-
-    }
 
     failureConditions {
         failOnText {
