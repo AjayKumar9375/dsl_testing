@@ -12,12 +12,10 @@ import jetbrains.buildServer.configs.kotlin.triggers.vcs
 object DslTestingConfig : BuildType({
     var dslTestingBuild = DslTestingBuild("YourBuildName", "YourArtifactRules")
 
-    var pythonBuildStep = PythonBuildStep("YourId", "YourFileName", "YourScriptArguments")
-
+    // var pythonBuildStep = PythonBuildStep("YourId", "YourFileName", "YourScriptArguments")
     val dslTestingBuildConfig = dslTestingBuild.apply {
         steps {
-            pythonBuildStep
+            createPythonBuildStep("YourId", "YourFileName", "YourScriptArguments")
         }
-    }
 })
 
