@@ -43,7 +43,6 @@ class DslTesting_BuildTypes( name: String, artifactRules: String) : BuildType({
 
 
 class DslTesting_BuildSteps(id: String, filename: String, scriptArguments: String) : BuildSteps {
-    init {
         steps {
             python {
                 this.id = id
@@ -53,7 +52,6 @@ class DslTesting_BuildSteps(id: String, filename: String, scriptArguments: Strin
                 }
             }
         }
-    }
 }
 
 // object DslTesting_Build : BuildType({
