@@ -14,11 +14,10 @@ object DslTestingConfig : BuildType({
 
     var pythonBuildStep = PythonBuildStep("YourId", "YourFileName", "YourScriptArguments")
 
-    val dslTestingBuildType = dslTestingBuild {
+    val dslTestingBuildConfig = dslTestingBuild.apply {
         steps {
-            pythonBuildStep.pythonStep
+            pythonBuildStep
         }
-
     }
 })
 
