@@ -1,11 +1,5 @@
-// BuildSteps.kt
-package my.pipeline
 
-import jetbrains.buildServer.configs.kotlin.v2019_2.*
-
-package my.pipeline
-
-import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.ScriptBuildStep
+import jetbrains.buildServer.configs.kotlin.buildSteps.ScriptBuildStep
 
 class BuildSteps {
 
