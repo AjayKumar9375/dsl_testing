@@ -13,7 +13,7 @@ object Project : Project({
 
     // buildType(DslTesting_BuildTypes("Build", "json_destination.json", "python_runner", "main.py",  "--path_to_source_json_file %source% --path_to_destination_json_file %destination% --location_one %location1% --location_two %location2%"))
   
-    buildType(DslTesting_BuildT(DslTesting))
+    buildType(DslTesting_BuildT(DslTestingConfig))
 
     // buildType.addTo(this)
     // buildSteps.addTo(this)
