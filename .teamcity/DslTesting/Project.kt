@@ -11,17 +11,20 @@ object Project : Project({
 
     vcsRoot(DslTesting_HttpsGithubComAjayKumar9375dslTestingGitRefsHeadsMain)
 
-    buildType(DslTesting_Build)
-    buildType(package_build)
-    buildType(DslTesting_Build2)
-    buildType(package_build2)
 
-    sequential {
-        buildType(DslTesting_Build)
-        parallel{
-            buildType(DslTesting_Build2)
-            buildType(package_build2)
-        }
-        buildType(package_build)
-    }
+    buildType(MyBuildConfiguration())
+
+    // buildType(DslTesting_Build)
+    // buildType(package_build)
+    // buildType(DslTesting_Build2)
+    // buildType(package_build2)
+
+    // sequential {
+    //     buildType(DslTesting_Build)
+    //     parallel{
+    //         buildType(DslTesting_Build2)
+    //         buildType(package_build2)
+    //     }
+    //     buildType(package_build)
+    // }
 })
