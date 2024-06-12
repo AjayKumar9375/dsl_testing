@@ -6,7 +6,7 @@ import jetbrains.buildServer.configs.kotlin.failureConditions.failOnText
 object DslTestingConfig {
     val dslTestingBuild = DslTestingBuild("YourBuildName", "YourArtifactRules")
 
-    val pythonBuildStep = PythonBuildStep("YourId", "YourFileName", "YourScriptArguments")
+    val pythonBuildStep = PythonBuildStep1("YourId", "YourFileName", "YourScriptArguments")
 
     val dslTestingBuildType = dslTestingBuild {
         steps {
