@@ -13,7 +13,7 @@ object DslTestingConfig : BuildType({
 
     val dslTestingBuildType = dslTestingBuild {
         steps {
-            pythonBuildStep.pythonStep
+            step(pythonBuildStep)
         }
 
     }
