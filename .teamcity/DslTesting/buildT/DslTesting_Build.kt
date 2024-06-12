@@ -7,9 +7,9 @@ import jetbrains.buildServer.configs.kotlin.failureConditions.failOnText
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
 
 object DslTestingConfig : BuildType({
-    val dslTestingBuild = DslTestingBuild("YourBuildName", "YourArtifactRules")
+    var dslTestingBuild = DslTestingBuild("YourBuildName", "YourArtifactRules")
 
-    val pythonBuildStep = PythonBuildStep("YourId", "YourFileName", "YourScriptArguments")
+    var pythonBuildStep = PythonBuildStep("YourId", "YourFileName", "YourScriptArguments")
 
     val dslTestingBuildType = dslTestingBuild {
         steps {
