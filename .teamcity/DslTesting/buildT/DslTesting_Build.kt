@@ -1,4 +1,4 @@
-import DslTesting.buildT.buildTypes.BuildSteps
+import DslTesting.buildT.buildTypes.BuildTypes
 import DslTesting.buildT.buildSteps.BuildSteps
 import jetbrains.buildServer.configs.kotlin.failureConditions.BuildFailureOnText
 import jetbrains.buildServer.configs.kotlin.failureConditions.failOnText
