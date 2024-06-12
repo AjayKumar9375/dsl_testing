@@ -1,5 +1,5 @@
-import DslTesting.buildT.buildTypes.BuildTypes
-import DslTesting.buildT.buildSteps.BuildSteps
+package DslTesting.buildT.*
+
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildFeatures.perfmon
 import jetbrains.buildServer.configs.kotlin.failureConditions.BuildFailureOnText
