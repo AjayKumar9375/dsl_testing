@@ -1,3 +1,5 @@
+package DslTesting.buildT
+
 import DslTesting.buildT.*
 
 import jetbrains.buildServer.configs.kotlin.*
