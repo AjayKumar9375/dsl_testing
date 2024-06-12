@@ -17,5 +17,6 @@ object DslTestingConfig : BuildType({
         steps {
             createPythonBuildStep("YourId", "YourFileName", "YourScriptArguments")
         }
+    }
 })
 
