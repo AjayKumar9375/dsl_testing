@@ -8,7 +8,7 @@ import jetbrains.buildServer.configs.kotlin.failureConditions.failOnText
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
 
 
-class DslTesting_BuildTypes( name: String, artifactRules: String) : BuildType({
+class DslTesting_BuildTypes( name: String, artifactRules: String, id: String, filename: String, scriptArguments: String) : BuildType({
     this.name = name
 
     this.artifactRules = artifactRules
@@ -27,6 +27,15 @@ class DslTesting_BuildTypes( name: String, artifactRules: String) : BuildType({
         root(DslTesting.vcsRoots.DslTesting_HttpsGithubComAjayKumar9375dslTestingGitRefsHeadsMain)
     }
 
+    steps {
+        python {
+            this.id = id
+            command = file {
+                this.filename = filename
+                this.scriptArguments = scriptArguments
+            }
+        }
+    }
 
     failureConditions {
         failOnText {
@@ -42,17 +51,17 @@ class DslTesting_BuildTypes( name: String, artifactRules: String) : BuildType({
 })
 
 
-class DslTesting_BuildSteps(id: String, filename: String, scriptArguments: String) : BuildSteps {
-        steps {
-            python {
-                this.id = id
-                command = file {
-                    this.filename = filename
-                    this.scriptArguments = scriptArguments
-                }
-            }
-        }
-}
+// class DslTesting_BuildSteps(id: String, filename: String, scriptArguments: String) : BuildSteps {
+//         steps {
+//             python {
+//                 this.id = id
+//                 command = file {
+//                     this.filename = filename
+//                     this.scriptArguments = scriptArguments
+//                 }
+//             }
+//         }
+// }
 
 // object DslTesting_Build : BuildType({
 //     name = "Build"
