@@ -9,18 +9,10 @@ import jetbrains.buildServer.configs.kotlin.failureConditions.failOnText
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
 
 
-object DslTesting_Build : BuildType({
-    name = "Build"
+class DslTesting_Build( name: String, artifactRules: String, id: String, filename: String, scriptArguments: String ) : BuildType({
+    this.name = name
 
-    artifactRules = "json_destination.json"
-
-    params {
-        param("destination", "json_destination.json")
-        param("location1", "PlantModel")
-        param("location2", "Bsc")
-        param("Organization", "KPIT")
-        param("source", "json_source.json")
-    }
+    this.artifactRules = artifactRules
 
     vcs {
         root(DslTesting.vcsRoots.DslTesting_HttpsGithubComAjayKumar9375dslTestingGitRefsHeadsMain)
@@ -28,193 +20,223 @@ object DslTesting_Build : BuildType({
 
     steps {
         python {
-            id = "python_runner"
+            this.id = id
             command = file {
-                filename = "main.py"
-                scriptArguments = "--path_to_source_json_file %source% --path_to_destination_json_file %destination% --location_one %location1% --location_two %location2%"
+                this.filename = filename
+                this.scriptArguments = scriptArguments
             }
         }
     }
 
-    triggers {
-        vcs {
-            // branchFilter = ".*"
-        }
-    }
 
-
-    failureConditions {
-        failOnText {
-            conditionType = BuildFailureOnText.ConditionType.CONTAINS
-            pattern = "Key not found"
-            failureMessage = "Key didn't match"
-            reverse = false
-            stopBuildOnFailure = true
-        }
-    }
-
-    features {
-        perfmon {
-        }
-    }
 })
 
+// object DslTesting_Build : BuildType({
+//     name = "Build"
 
-object package_build : BuildType({
-    name = "package"
+//     artifactRules = "json_destination.json"
 
-    artifactRules = "json_destination.json"
+//     params {
+//         param("destination", "json_destination.json")
+//         param("location1", "PlantModel")
+//         param("location2", "Bsc")
+//         param("Organization", "KPIT")
+//         param("source", "json_source.json")
+//     }
 
-    params {
-        param("destination", "json_destination.json")
-        param("location1", "PlantModel")
-        param("location2", "Bsc")
-        param("Organization", "KPIT")
-        param("source", "json_source.json")
-    }
+//     vcs {
+//         root(DslTesting.vcsRoots.DslTesting_HttpsGithubComAjayKumar9375dslTestingGitRefsHeadsMain)
+//     }
 
-    vcs {
-        root(DslTesting.vcsRoots.DslTesting_HttpsGithubComAjayKumar9375dslTestingGitRefsHeadsMain)
-    }
+//     steps {
+//         python {
+//             id = "python_runner"
+//             command = file {
+//                 filename = "main.py"
+//                 scriptArguments = "--path_to_source_json_file %source% --path_to_destination_json_file %destination% --location_one %location1% --location_two %location2%"
+//             }
+//         }
+//     }
 
-    steps {
-        python {
-            id = "python_runner"
-            command = file {
-                filename = "main.py"
-                scriptArguments = "--path_to_source_json_file %source% --path_to_destination_json_file %destination% --location_one %location1% --location_two %location2%"
-            }
-        }
-    }
-
-    triggers {
-        vcs {
-            // branchFilter = ".*"
-        }
-    }
-
-    // dependencies{
-    //     snapshot(DslTesting_Build){}
-    // }
-
-    failureConditions {
-        failOnText {
-            conditionType = BuildFailureOnText.ConditionType.CONTAINS
-            pattern = "Key not found"
-            failureMessage = "Key didn't match"
-            reverse = false
-            stopBuildOnFailure = true
-        }
-    }
-
-    features {
-        perfmon {
-        }
-    }
-})
+//     triggers {
+//         vcs {
+//             // branchFilter = ".*"
+//         }
+//     }
 
 
+//     failureConditions {
+//         failOnText {
+//             conditionType = BuildFailureOnText.ConditionType.CONTAINS
+//             pattern = "Key not found"
+//             failureMessage = "Key didn't match"
+//             reverse = false
+//             stopBuildOnFailure = true
+//         }
+//     }
 
-object DslTesting_Build2 : BuildType({
-    name = "Build2"
-
-    artifactRules = "json_destination.json"
-
-    params {
-        param("destination", "json_destination.json")
-        param("location1", "PlantModel")
-        param("location2", "Bsc")
-        param("Organization", "KPIT")
-        param("source", "json_source.json")
-    }
-
-    vcs {
-        root(DslTesting.vcsRoots.DslTesting_HttpsGithubComAjayKumar9375dslTestingGitRefsHeadsMain)
-    }
-
-    steps {
-        python {
-            id = "python_runner"
-            command = file {
-                filename = "main.py"
-                scriptArguments = "--path_to_source_json_file %source% --path_to_destination_json_file %destination% --location_one %location1% --location_two %location2%"
-            }
-        }
-    }
-
-    triggers {
-        vcs {
-            // branchFilter = ".*"
-        }
-    }
+//     features {
+//         perfmon {
+//         }
+//     }
+// })
 
 
-    failureConditions {
-        failOnText {
-            conditionType = BuildFailureOnText.ConditionType.CONTAINS
-            pattern = "Key not found"
-            failureMessage = "Key didn't match"
-            reverse = false
-            stopBuildOnFailure = true
-        }
-    }
+// object package_build : BuildType({
+//     name = "package"
 
-    features {
-        perfmon {
-        }
-    }
-})
+//     artifactRules = "json_destination.json"
+
+//     params {
+//         param("destination", "json_destination.json")
+//         param("location1", "PlantModel")
+//         param("location2", "Bsc")
+//         param("Organization", "KPIT")
+//         param("source", "json_source.json")
+//     }
+
+//     vcs {
+//         root(DslTesting.vcsRoots.DslTesting_HttpsGithubComAjayKumar9375dslTestingGitRefsHeadsMain)
+//     }
+
+//     steps {
+//         python {
+//             id = "python_runner"
+//             command = file {
+//                 filename = "main.py"
+//                 scriptArguments = "--path_to_source_json_file %source% --path_to_destination_json_file %destination% --location_one %location1% --location_two %location2%"
+//             }
+//         }
+//     }
+
+//     triggers {
+//         vcs {
+//             // branchFilter = ".*"
+//         }
+//     }
+
+//     // dependencies{
+//     //     snapshot(DslTesting_Build){}
+//     // }
+
+//     failureConditions {
+//         failOnText {
+//             conditionType = BuildFailureOnText.ConditionType.CONTAINS
+//             pattern = "Key not found"
+//             failureMessage = "Key didn't match"
+//             reverse = false
+//             stopBuildOnFailure = true
+//         }
+//     }
+
+//     features {
+//         perfmon {
+//         }
+//     }
+// })
 
 
-object package_build2 : BuildType({
-    name = "package2"
 
-    artifactRules = "json_destination.json"
+// object DslTesting_Build2 : BuildType({
+//     name = "Build2"
 
-    params {
-        param("destination", "json_destination.json")
-        param("location1", "PlantModel")
-        param("location2", "Bsc")
-        param("Organization", "KPIT")
-        param("source", "json_source.json")
-    }
+//     artifactRules = "json_destination.json"
 
-    vcs {
-        root(DslTesting.vcsRoots.DslTesting_HttpsGithubComAjayKumar9375dslTestingGitRefsHeadsMain)
-    }
+//     params {
+//         param("destination", "json_destination.json")
+//         param("location1", "PlantModel")
+//         param("location2", "Bsc")
+//         param("Organization", "KPIT")
+//         param("source", "json_source.json")
+//     }
 
-    steps {
-        python {
-            id = "python_runner"
-            command = file {
-                filename = "main.py"
-                scriptArguments = "--path_to_source_json_file %source% --path_to_destination_json_file %destination% --location_one %location1% --location_two %location2%"
-            }
-        }
-    }
+//     vcs {
+//         root(DslTesting.vcsRoots.DslTesting_HttpsGithubComAjayKumar9375dslTestingGitRefsHeadsMain)
+//     }
 
-    triggers {
-        vcs {
-            // branchFilter = ".*"
-        }
-    }
+//     steps {
+//         python {
+//             id = "python_runner"
+//             command = file {
+//                 filename = "main.py"
+//                 scriptArguments = "--path_to_source_json_file %source% --path_to_destination_json_file %destination% --location_one %location1% --location_two %location2%"
+//             }
+//         }
+//     }
 
-    // dependencies{
-    //     snapshot(DslTesting_Build){}
-    // }
+//     triggers {
+//         vcs {
+//             // branchFilter = ".*"
+//         }
+//     }
 
-    failureConditions {
-        failOnText {
-            conditionType = BuildFailureOnText.ConditionType.CONTAINS
-            pattern = "Key not found"
-            failureMessage = "Key didn't match"
-            reverse = false
-            stopBuildOnFailure = true
-        }
-    }
 
-    features {
-        perfmon {
-        }
-    }
-})
+//     failureConditions {
+//         failOnText {
+//             conditionType = BuildFailureOnText.ConditionType.CONTAINS
+//             pattern = "Key not found"
+//             failureMessage = "Key didn't match"
+//             reverse = false
+//             stopBuildOnFailure = true
+//         }
+//     }
+
+//     features {
+//         perfmon {
+//         }
+//     }
+// })
+
+
+// object package_build2 : BuildType({
+//     name = "package2"
+
+//     artifactRules = "json_destination.json"
+
+//     params {
+//         param("destination", "json_destination.json")
+//         param("location1", "PlantModel")
+//         param("location2", "Bsc")
+//         param("Organization", "KPIT")
+//         param("source", "json_source.json")
+//     }
+
+//     vcs {
+//         root(DslTesting.vcsRoots.DslTesting_HttpsGithubComAjayKumar9375dslTestingGitRefsHeadsMain)
+//     }
+
+//     steps {
+//         python {
+//             id = "python_runner"
+//             command = file {
+//                 filename = "main.py"
+//                 scriptArguments = "--path_to_source_json_file %source% --path_to_destination_json_file %destination% --location_one %location1% --location_two %location2%"
+//             }
+//         }
+//     }
+
+//     triggers {
+//         vcs {
+//             // branchFilter = ".*"
+//         }
+//     }
+
+//     // dependencies{
+//     //     snapshot(DslTesting_Build){}
+//     // }
+
+//     failureConditions {
+//         failOnText {
+//             conditionType = BuildFailureOnText.ConditionType.CONTAINS
+//             pattern = "Key not found"
+//             failureMessage = "Key didn't match"
+//             reverse = false
+//             stopBuildOnFailure = true
+//         }
+//     }
+
+//     features {
+//         perfmon {
+//         }
+//     }
+// })

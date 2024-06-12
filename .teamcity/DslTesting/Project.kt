@@ -12,17 +12,17 @@ object Project : Project({
     vcsRoot(DslTesting_HttpsGithubComAjayKumar9375dslTestingGitRefsHeadsMain)
 
 
-    buildType(DslTesting_Build)
-    buildType(package_build)
-    buildType(DslTesting_Build2)
-    buildType(package_build2)
+    buildType(DslTesting_Build("Build", "json_destination.json", "python_runner", "main.py",  "--path_to_source_json_file %source% --path_to_destination_json_file %destination% --location_one %location1% --location_two %location2%"))
+    // buildType(package_build)
+    // buildType(DslTesting_Build2)
+    // buildType(package_build2)
 
-    sequential {
-        buildType(DslTesting_Build)
-        parallel{
-            buildType(DslTesting_Build2)
-            buildType(package_build2)
-        }
-        buildType(package_build)
-    }
+    // sequential {
+    //     buildType(DslTesting_Build)
+    //     parallel{
+    //         buildType(DslTesting_Build2)
+    //         buildType(package_build2)
+    //     }
+    //     buildType(package_build)
+    // }
 })
