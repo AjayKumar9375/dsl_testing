@@ -19,7 +19,7 @@ class MyBuildConfiguration : BuildType({
     val buildSteps = BuildSteps()
     
     steps {
-        buildSteps.ScriptBuildStep()
+        buildSteps.step1 
     }
     
     triggers {
