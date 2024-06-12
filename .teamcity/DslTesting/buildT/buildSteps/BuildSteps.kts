@@ -2,7 +2,7 @@ package DslTesting.buildT.buildSteps
 
 import jetbrains.buildServer.configs.kotlin.buildSteps.python
 
-class BuildStep(id: String, filename: String, scriptArguments: String) {
+class PythonBuildStep(id: String, filename: String, scriptArguments: String) {
     val pythonStep = python {
         this.id = id
         command = file {
