@@ -10,8 +10,7 @@ object Project : Project({
     name = "Dsl Testing"
 
     vcsRoot(DslTesting_HttpsGithubComAjayKumar9375dslTestingGitRefsHeadsMain)
-//  val bts = 
- sequential{
+ val bts = sequential{
     buildType(DslTesting_BuildTypes(
         "Build1", 
         "1_This build is used for importing the json values",
