@@ -37,7 +37,7 @@ class DslTesting_BuildTypes(
 
     steps {
         python {
-            this.id = step_id
+            id = step_id
             command = file {
                 this.filename = filename
                 this.scriptArguments = scriptArguments

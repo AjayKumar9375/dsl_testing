@@ -13,7 +13,7 @@ object Project : Project({
 
     buildType(DslTesting_BuildTypes(
         "Build", 
-        "This build is used for importing the json values"
+        "This build is used for importing the json values",
         "json_destination.json", 
         "python_runner", 
         "main.py",  
