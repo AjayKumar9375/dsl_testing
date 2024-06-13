@@ -4,6 +4,7 @@ import DslTesting.buildTypes.*
 import DslTesting.vcsRoots.*
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.Project
+import jetbrains.buildServer.configs.kotlin.triggers.vcs
 
 object Project : Project({
     id("DslTesting")
@@ -83,11 +84,11 @@ object Project : Project({
     }.buildTypes()
 
  bts.forEach{ buildType(it)}
-//  bts.last().triggers{
-//     vcs{
+ bts.last().triggers{
+    vcs{
         
-//     }
-//  }
+    }
+ }
 
     // buildType(package_build)
     // buildType(DslTesting_Build2)
