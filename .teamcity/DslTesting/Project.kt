@@ -90,10 +90,9 @@ object Project : Project({
             "--path_to_source_json_file %source% --path_to_destination_json_file %destination% --location_one %location1% --location_two %location2%"))
         
            
-    }
-    // .buildTypes()
+    }.buildTypes()
 
-//  bts.forEach{ buildType(it)}
+ bts.forEach{ buildType(it)}
 //  bts.last().triggers{
 //     vcs{
         
