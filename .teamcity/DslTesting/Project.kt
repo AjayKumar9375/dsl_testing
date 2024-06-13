@@ -10,7 +10,8 @@ object Project : Project({
     name = "Dsl Testing"
 
     vcsRoot(DslTesting_HttpsGithubComAjayKumar9375dslTestingGitRefsHeadsMain)
- val bts = sequential{
+//  val bts = 
+ sequential{
     buildType(DslTesting_BuildTypes(
         "Build", 
         "This build is used for importing the json values",
@@ -18,14 +19,15 @@ object Project : Project({
         "python_runner", 
         "main.py",  
         "--path_to_source_json_file %source% --path_to_destination_json_file %destination% --location_one %location1% --location_two %location2%"))
-    }.buildTypes()
-
- bts.forEach{ buildType(it)}
- bts.last().triggers{
-    vcs{
-        
     }
- }
+    // .buildTypes()
+
+//  bts.forEach{ buildType(it)}
+//  bts.last().triggers{
+//     vcs{
+        
+//     }
+//  }
 
     // buildType(package_build)
     // buildType(DslTesting_Build2)
