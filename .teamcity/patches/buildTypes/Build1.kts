@@ -1,6 +1,7 @@
 package patches.buildTypes
 
 import jetbrains.buildServer.configs.kotlin.*
+import jetbrains.buildServer.configs.kotlin.triggers.vcs
 import jetbrains.buildServer.configs.kotlin.ui.*
 
 /*
@@ -13,4 +14,11 @@ changeBuildType(RelativeId("Build1")) {
         "Unexpected name: '$name'"
     }
     name = "Build11"
+
+    triggers {
+        add {
+            vcs {
+            }
+        }
+    }
 }
