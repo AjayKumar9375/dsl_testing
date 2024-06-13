@@ -42,7 +42,7 @@ class DslTesting_BuildTypes(
 
 
     steps {
-        DslTesting_BuildStep(id, filename, scriptArguments)
+        DslTesting_BuildStep(step_id, filename, scriptArguments)
     }
 
     // steps {
