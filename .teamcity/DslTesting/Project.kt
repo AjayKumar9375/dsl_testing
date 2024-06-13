@@ -88,7 +88,7 @@ object Project : Project({
         vcs {
         }
  }
-    // Hi this is me h
+    // Hi this is
 
     // buildType(package_build)
     // buildType(DslTesting_Build2)
