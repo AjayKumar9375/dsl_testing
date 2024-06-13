@@ -1,5 +1,6 @@
 package DslTesting.buildTypes
 
+import DslTesting.DslBuildStep.*
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildFeatures.perfmon
 import jetbrains.buildServer.configs.kotlin.buildSteps.python
@@ -15,7 +16,7 @@ class DslTesting_BuildTypes(
     step_id: String, 
     filename: String, 
     scriptArguments: String) : BuildType({
-        
+
         fun String.toExtId(prefix: String = ""): String {
             val id = this.replace(" ", "")
             return if (prefix.isEmpty()) id else "$prefix$id"
@@ -39,15 +40,20 @@ class DslTesting_BuildTypes(
         root(DslTesting.vcsRoots.DslTesting_HttpsGithubComAjayKumar9375dslTestingGitRefsHeadsMain)
     }
 
+
     steps {
-        python {
-            id = step_id
-            command = file {
-                this.filename = filename
-                this.scriptArguments = scriptArguments
-            }
-        }
+        DslTesting_BuildStep(id, filename, scriptArguments)
     }
+
+    // steps {
+    //     python {
+    //         id = step_id
+    //         command = file {
+    //             this.filename = filename
+    //             this.scriptArguments = scriptArguments
+    //         }
+    //     }
+    // }
 
     failureConditions {
         failOnText {
