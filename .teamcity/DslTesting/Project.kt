@@ -79,16 +79,7 @@ object Project : Project({
             "json_destination.json", 
             "python_runner", 
             "main.py",  
-            "--path_to_source_json_file %source% --path_to_destination_json_file %destination% --location_one %location1% --location_two %location2%"))
-         buildType(DslTesting_BuildTypes(
-            "Build10", 
-            "10_This build is used for importing the json values",
-            "json_destination.json", 
-            "python_runner", 
-            "main.py",  
-            "--path_to_source_json_file %source% --path_to_destination_json_file %destination% --location_one %location1% --location_two %location2%"))
-        
-           
+            "--path_to_source_json_file %source% --path_to_destination_json_file %destination% --location_one %location1% --location_two %location2%"))           
     }.buildTypes()
 
  bts.forEach{ buildType(it)}
