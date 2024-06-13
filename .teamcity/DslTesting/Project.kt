@@ -85,11 +85,10 @@ object Project : Project({
 
  bts.forEach{ buildType(it)}
  bts.last().triggers{
-    add {
+    // add {
         vcs {
         }
-    }
-    
+    // }
  }
 
     // buildType(package_build)
