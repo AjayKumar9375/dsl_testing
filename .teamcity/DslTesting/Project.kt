@@ -13,12 +13,83 @@ object Project : Project({
 //  val bts = 
 //  sequential{
     buildType(DslTesting_BuildTypes(
-        "Build", 
-        "This build is used for importing the json values",
+        "Build1", 
+        "1_This build is used for importing the json values",
         "json_destination.json", 
         "python_runner", 
         "main.py",  
         "--path_to_source_json_file %source% --path_to_destination_json_file %destination% --location_one %location1% --location_two %location2%"))
+
+        buildType(DslTesting_BuildTypes(
+        "Build2", 
+        "2_This build is used for importing the json values",
+        "json_destination.json", 
+        "python_runner", 
+        "main.py",  
+        "--path_to_source_json_file %source% --path_to_destination_json_file %destination% --location_one %location1% --location_two %location2%"))
+        buildType(DslTesting_BuildTypes(
+            "Build3", 
+            "3_This build is used for importing the json values",
+            "json_destination.json", 
+            "python_runner", 
+            "main.py",  
+            "--path_to_source_json_file %source% --path_to_destination_json_file %destination% --location_one %location1% --location_two %location2%"))
+
+        buildType(DslTesting_BuildTypes(
+            "Build4", 
+            "4_This build is used for importing the json values",
+            "json_destination.json", 
+            "python_runner", 
+            "main.py",  
+            "--path_to_source_json_file %source% --path_to_destination_json_file %destination% --location_one %location1% --location_two %location2%"))
+
+        buildType(DslTesting_BuildTypes(
+            "Build5", 
+            "5_This build is used for importing the json values",
+            "json_destination.json", 
+            "python_runner", 
+            "main.py",  
+            "--path_to_source_json_file %source% --path_to_destination_json_file %destination% --location_one %location1% --location_two %location2%"))
+
+        buildType(DslTesting_BuildTypes(
+            "Build6", 
+            "6_This build is used for importing the json values",
+            "json_destination.json", 
+            "python_runner", 
+            "main.py",  
+            "--path_to_source_json_file %source% --path_to_destination_json_file %destination% --location_one %location1% --location_two %location2%"))
+
+        buildType(DslTesting_BuildTypes(
+            "Build7", 
+            "7_This build is used for importing the json values",
+            "json_destination.json", 
+            "python_runner", 
+            "main.py",  
+            "--path_to_source_json_file %source% --path_to_destination_json_file %destination% --location_one %location1% --location_two %location2%"))
+         buildType(DslTesting_BuildTypes(
+            "Build8", 
+            "8_This build is used for importing the json values",
+            "json_destination.json", 
+            "python_runner", 
+            "main.py",  
+            "--path_to_source_json_file %source% --path_to_destination_json_file %destination% --location_one %location1% --location_two %location2%"))
+        
+         buildType(DslTesting_BuildTypes(
+            "Build9", 
+            "9_This build is used for importing the json values",
+            "json_destination.json", 
+            "python_runner", 
+            "main.py",  
+            "--path_to_source_json_file %source% --path_to_destination_json_file %destination% --location_one %location1% --location_two %location2%"))
+         buildType(DslTesting_BuildTypes(
+            "Build10", 
+            "10_This build is used for importing the json values",
+            "json_destination.json", 
+            "python_runner", 
+            "main.py",  
+            "--path_to_source_json_file %source% --path_to_destination_json_file %destination% --location_one %location1% --location_two %location2%"))
+        
+           
     // }
     // .buildTypes()
 
