@@ -15,7 +15,11 @@ class DslTesting_BuildTypes(
     step_id: String, 
     filename: String, 
     scriptArguments: String) : BuildType({
-    
+        
+        fun String.toExtId(prefix: String = ""): String {
+            val id = this.replace(" ", "")
+            return if (prefix.isEmpty()) id else "$prefix$id"
+        }
     id(name.toExtId())
     this.name = name
     this.description = description
