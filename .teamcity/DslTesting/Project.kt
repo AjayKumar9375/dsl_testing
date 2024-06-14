@@ -141,13 +141,13 @@ object Project : Project({
                 "json_destination.json"
         ))
     }
-
-    sequential {
-        buildTypes.forEach { buildType ->
-            buildType
-        }
-    }
-
+//
+//    sequential {
+//        buildTypes.forEach { buildType ->
+//            buildType
+//        }
+//    }
+//
 
 
 //
