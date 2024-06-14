@@ -62,43 +62,6 @@ object Project : Project({
             "json_destination.json"))
 
 
-
-//
     val featureList = listOf<String>("feature1", "feature2", "feature3", "feature4", "feature5", "feature6", "feature7", "feature8", "feature9")
-//
-//
-//
-//
-//    sequential {
-//        featureList.forEach { feature ->
-//            buildType(feature, "json_destination.json", "python_runner", "main.py", "--path_to_source_json_file %source% --path_to_destination_json_file %destination% --location_one %location1% --location_two %location2%")
-//        }
-//    }
-//
-//    featureList.last().triggers {
-//        vcs {
-//        }
-//    }
 
-
-//
-//    featureList.forEach{ buildType()}
-// featureList.last().triggers{
-//        vcs {
-//        }
-// }
-    //
-
-    // buildType(package_build)
-    // buildType(DslTesting_Build2)
-    // buildType(package_build2)
-
-    // sequential {
-    //     buildType(DslTesting_Build)
-    //     parallel{
-    //         buildType(DslTesting_Build2)
-    //         buildType(package_build2)
-    //     }
-    //     buildType(package_build)
-    // }
 })
