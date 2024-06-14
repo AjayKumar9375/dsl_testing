@@ -12,77 +12,6 @@ object Project : Project({
     name = "Dsl Testing"
 
     vcsRoot(DslTesting_HttpsGithubComAjayKumar9375dslTestingGitRefsHeadsMain)
-// val bts = sequential{
-//    buildType(DslTesting_BuildTypes(
-//        "feature1",
-//        "1_This build is used for importing the json values",
-//        "json_destination.json",
-//        "python_runner",
-//        "main.py",
-//        "--path_to_source_json_file %source% --path_to_destination_json_file %destination% --location_one %location1% --location_two %location2%"))
-//
-//        buildType(DslTesting_BuildTypes(
-//        "feature2",
-//        "2_This build is used for importing the json values",
-//        "json_destination.json",
-//        "python_runner",
-//        "main.py",
-//        "--path_to_source_json_file %source% --path_to_destination_json_file %destination% --location_one %location1% --location_two %location2%"))
-//        buildType(DslTesting_BuildTypes(
-//            "feature3",
-//            "3_This build is used for importing the json values",
-//            "json_destination.json",
-//            "python_runner",
-//            "main.py",
-//            "--path_to_source_json_file %source% --path_to_destination_json_file %destination% --location_one %location1% --location_two %location2%"))
-//
-//        buildType(DslTesting_BuildTypes(
-//            "feature4",
-//            "4_This build is used for importing the json values",
-//            "json_destination.json",
-//            "python_runner",
-//            "main.py",
-//            "--path_to_source_json_file %source% --path_to_destination_json_file %destination% --location_one %location1% --location_two %location2%"))
-//
-//        buildType(DslTesting_BuildTypes(
-//            "feature5",
-//            "5_This build is used for importing the json values",
-//            "json_destination.json",
-//            "python_runner",
-//            "main.py",
-//            "--path_to_source_json_file %source% --path_to_destination_json_file %destination% --location_one %location1% --location_two %location2%"))
-//
-//        buildType(DslTesting_BuildTypes(
-//            "feature6",
-//            "6_This build is used for importing the json values",
-//            "json_destination.json",
-//            "python_runner",
-//            "main.py",
-//            "--path_to_source_json_file %source% --path_to_destination_json_file %destination% --location_one %location1% --location_two %location2%"))
-//
-//        buildType(DslTesting_BuildTypes(
-//            "feature7",
-//            "7_This build is used for importing the json values",
-//            "json_destination.json",
-//            "python_runner",
-//            "main.py",
-//            "--path_to_source_json_file %source% --path_to_destination_json_file %destination% --location_one %location1% --location_two %location2%"))
-//         buildType(DslTesting_BuildTypes(
-//            "feature8",
-//            "8_This build is used for importing the json values",
-//            "json_destination.json",
-//            "python_runner",
-//            "main.py",
-//            "--path_to_source_json_file %source% --path_to_destination_json_file %destination% --location_one %location1% --location_two %location2%"))
-//
-//         buildType(DslTesting_BuildTypes(
-//            "feature9",
-//            "9_This build is used for importing the json values",
-//            "json_destination.json",
-//            "python_runner",
-//            "main.py",
-//            "--path_to_source_json_file %source% --path_to_destination_json_file %destination% --location_one %location1% --location_two %location2%"))
-//    }.buildTypes()
 
 
     //Features List
@@ -134,28 +63,12 @@ object Project : Project({
 
     val featureList = listOf<String>("feature1", "feature2", "feature3", "feature4", "feature5", "feature6", "feature7", "feature8", "feature9")
 
-//    val buildTypes = featureList.mapIndexed { index, feature ->
-//        buildType(DslTesting_BuildTypes(
-//                feature,
-//                "${index + 1}_This build is used for importing the json values",
-//                "json_destination.json"
-//        ))
-//    }
-//
-//    sequential {
-//        buildTypes.forEach { buildType ->
-//            buildType
-//        }
-//    }
-//
 
 
-//
-//    featureList.forEach{ buildType()}
-// featureList.last().triggers{
-//        vcs {
-//        }
-// }
+ featureList.last().triggers{
+        vcs {
+        }
+ }
     //
 
     // buildType(package_build)
