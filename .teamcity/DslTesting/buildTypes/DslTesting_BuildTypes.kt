@@ -51,7 +51,7 @@ class DslTesting_BuildTypes(
 
          triggers {
          vcs {
-              branchFilter = ".*"
+              branchFilter = ""
          }
      }
 
