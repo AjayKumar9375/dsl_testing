@@ -42,7 +42,13 @@ class DslTesting_BuildTypes(
 
 
     steps {
-        DslTesting_BuildStep(step_id, filename, scriptArguments)
+        python {
+            this.id = id
+            command = file {
+                this.filename = filename
+                this.scriptArguments = scriptArguments
+            }
+        }
     }
 
     // steps {
