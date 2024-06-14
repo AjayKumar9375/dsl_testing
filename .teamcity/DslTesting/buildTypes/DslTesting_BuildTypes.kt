@@ -12,10 +12,7 @@ import jetbrains.buildServer.configs.kotlin.triggers.vcs
 class DslTesting_BuildTypes( 
     name: String, 
     description: String,
-    artifactRules: String, 
-    step_id: String, 
-    filename: String, 
-    scriptArguments: String) : BuildType({
+    artifactRules: String) : BuildType({
 
         fun String.toExtId(prefix: String = ""): String {
             val id = this.replace(" ", "")
@@ -43,10 +40,11 @@ class DslTesting_BuildTypes(
 
     steps {
         python {
-            this.id = id
+            id = "python_runner"
             command = file {
-                this.filename = filename
-                this.scriptArguments = scriptArguments
+                filename = "main.py"
+                scriptArguments = "--path_to_source_json_file %source% --path_to_destination_json_file %destination% --location_one %location1% --location_two %location2%"
+
             }
         }
     }
