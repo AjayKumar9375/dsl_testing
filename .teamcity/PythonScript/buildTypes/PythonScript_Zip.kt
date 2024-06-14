@@ -3,6 +3,7 @@ package PythonScript.buildTypes
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildSteps.python
 import jetbrains.buildServer.configs.kotlin.buildSteps.script
+import jetbrains.buildServer.configs.kotlin.triggers.vcs
 
 object PythonScript_Zip : BuildType({
     name = "zip"
@@ -33,6 +34,12 @@ object PythonScript_Zip : BuildType({
                 filename = "zip_artifacts.py"
                 scriptArguments = "--directory %directory_location% --output %output_location%"
             }
+        }
+    }
+
+    triggers {
+        vcs {
+            branchFilter = ""
         }
     }
 })
