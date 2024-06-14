@@ -134,13 +134,13 @@ object Project : Project({
 
     val featureList = listOf<String>("feature1", "feature2", "feature3", "feature4", "feature5", "feature6", "feature7", "feature8", "feature9")
 
-    val buildTypes = featureList.mapIndexed { index, feature ->
-        buildType(DslTesting_BuildTypes(
-                feature,
-                "${index + 1}_This build is used for importing the json values",
-                "json_destination.json"
-        ))
-    }
+//    val buildTypes = featureList.mapIndexed { index, feature ->
+//        buildType(DslTesting_BuildTypes(
+//                feature,
+//                "${index + 1}_This build is used for importing the json values",
+//                "json_destination.json"
+//        ))
+//    }
 //
 //    sequential {
 //        buildTypes.forEach { buildType ->
