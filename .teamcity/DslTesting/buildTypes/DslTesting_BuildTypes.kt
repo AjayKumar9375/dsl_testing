@@ -49,15 +49,11 @@ class DslTesting_BuildTypes(
         }
     }
 
-    // steps {
-    //     python {
-    //         id = step_id
-    //         command = file {
-    //             this.filename = filename
-    //             this.scriptArguments = scriptArguments
-    //         }
-    //     }
-    // }
+         triggers {
+         vcs {
+             // branchFilter = ".*"
+         }
+     }
 
     failureConditions {
         failOnText {
