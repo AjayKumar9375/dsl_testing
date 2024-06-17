@@ -63,38 +63,7 @@ object Project : Project({
 
 **/
 
-//    val bts = listof(
-//        buildType(DslTesting_BuildTypes(
-//        "feature_1",
-//        "1_This build is used for importing the json values",
-//        "json_destination.json")),
-//
-//        buildType(DslTesting_BuildTypes(
-//            "feature_2",
-//            "2_This build is used for importing the json values",
-//            "json_destination.json"))
-//    ).buildTypes()
-
-//    bts.forEach{buildType(it)}
-
-/**
-    val featureList = listOf(
-            buildType(DslTesting_BuildTypes(
-                    "feature_1",
-                    "1_This build is used for importing the json values",
-                    "json_destination.json")),
-
-            buildType(DslTesting_BuildTypes(
-                    "feature_2",
-                    "2_This build is used for importing the json values",
-                    "json_destination.json"))
-    ).buildTypes()
-
-    featureList.forEach{buildType(it)}
-**/
-
-
-    val features = listOf(
+    val featuresList = listOf (
             "feature_1" to "1_This build is used for importing the json values",
             "feature_2" to "2_This build is used for importing the json values",
             "feature_3" to "3_This build is used for importing the json values",
@@ -106,7 +75,7 @@ object Project : Project({
             "feature_9" to "9_This build is used for importing the json values"
     )
 
-    for ((name, description) in features) {
+    for ((name, description) in featuresList) {
         buildType(DslTesting_BuildTypes(
                 name,
                 description,
