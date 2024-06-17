@@ -63,21 +63,55 @@ object Project : Project({
 
 **/
 
-    val bts = listof<String> (
-        buildType(DslTesting_BuildTypes(
-        "feature_1",
-        "1_This build is used for importing the json values",
-        "json_destination.json")),
+//    val bts = listof(
+//        buildType(DslTesting_BuildTypes(
+//        "feature_1",
+//        "1_This build is used for importing the json values",
+//        "json_destination.json")),
+//
+//        buildType(DslTesting_BuildTypes(
+//            "feature_2",
+//            "2_This build is used for importing the json values",
+//            "json_destination.json"))
+//    ).buildTypes()
 
-        buildType(DslTesting_BuildTypes(
-            "feature_2",
-            "2_This build is used for importing the json values",
-            "json_destination.json"))
+//    bts.forEach{buildType(it)}
+
+/**
+    val featureList = listOf(
+            buildType(DslTesting_BuildTypes(
+                    "feature_1",
+                    "1_This build is used for importing the json values",
+                    "json_destination.json")),
+
+            buildType(DslTesting_BuildTypes(
+                    "feature_2",
+                    "2_This build is used for importing the json values",
+                    "json_destination.json"))
     ).buildTypes()
 
-    bts.forEach{buildType(it)}
+    featureList.forEach{buildType(it)}
+**/
 
 
-//    val featureList = listOf<String>("feature1", "feature2", "feature3", "feature4", "feature5", "feature6", "feature7", "feature8", "feature9")
+    val features = listOf(
+            "feature_1" to "1_This build is used for importing the json values",
+            "feature_2" to "2_This build is used for importing the json values",
+            "feature_3" to "3_This build is used for importing the json values",
+            "feature_4" to "4_This build is used for importing the json values",
+            "feature_5" to "5_This build is used for importing the json values",
+            "feature_6" to "6_This build is used for importing the json values",
+            "feature_7" to "7_This build is used for importing the json values",
+            "feature_8" to "8_This build is used for importing the json values",
+            "feature_9" to "9_This build is used for importing the json values"
+    )
+
+    for ((name, description) in features) {
+        buildType(DslTesting_BuildTypes(
+                name,
+                description,
+                "json_destination.json"
+        ))
+    }
 
 })
