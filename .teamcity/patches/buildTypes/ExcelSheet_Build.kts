@@ -25,7 +25,7 @@ create(RelativeId("ExcelSheet"), BuildType({
             id = "python_runner"
             command = file {
                 filename = "excel_Py_Script.py"
-                scriptArguments = """--directory "sheet.xlsx""""
+                scriptArguments = """--directory "Book1.xlsx""""
             }
         }
     }
