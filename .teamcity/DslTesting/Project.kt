@@ -74,7 +74,7 @@ object Project : Project({
             "feature_8" to "8_This build is used for importing the json values",
             "feature_9" to "9_This build is used for importing the json values"
     )
-
+// for loop
     for ((name, description) in featuresList) {
         buildType(DslTesting_BuildTypes(
                 name,
