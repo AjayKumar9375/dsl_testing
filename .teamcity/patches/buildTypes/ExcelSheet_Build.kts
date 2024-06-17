@@ -3,6 +3,7 @@ package patches.buildTypes
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.BuildType
 import jetbrains.buildServer.configs.kotlin.buildFeatures.perfmon
+import jetbrains.buildServer.configs.kotlin.buildSteps.python
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
 import jetbrains.buildServer.configs.kotlin.ui.*
 
@@ -17,6 +18,16 @@ create(RelativeId("ExcelSheet"), BuildType({
 
     vcs {
         root(RelativeId("ExcelSheet_HttpsGithubComAjayKumar9375ExcelSheetGitRefsHeadsMain"))
+    }
+
+    steps {
+        python {
+            id = "python_runner"
+            command = file {
+                filename = "excel_Py_Script.py"
+                scriptArguments = """--directory "sheet.xlsx""""
+            }
+        }
     }
 
     triggers {
