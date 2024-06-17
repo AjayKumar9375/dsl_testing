@@ -32,7 +32,6 @@ create(RelativeId("ExcelSheet"), BuildType({
 
     triggers {
         vcs {
-            enabled = false
         }
     }
 
