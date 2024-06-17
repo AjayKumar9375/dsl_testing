@@ -1,0 +1,32 @@
+<meta-runner name="feature_1">
+  <description>1_This build is used for importing the json values</description>
+  <settings>
+    <parameters>
+      <param name="Organization" value="KPIT" />
+      <param name="destination" value="json_destination.json" />
+      <param name="location1" value="PlantModel" />
+      <param name="location2" value="Bsc" />
+      <param name="source" value="json_source.json" />
+    </parameters>
+    <build-runners>
+      <runner name="" type="python-runner">
+        <parameters>
+          <param name="command" value="file" />
+          <param name="coverageArgs" value="--omit=*lib*" />
+          <param name="envTool" value="none" />
+          <param name="installToolPackage" value="true" />
+          <param name="isCoverageEnabled" value="false" />
+          <param name="isTestReportingEnabled" value="true" />
+          <param name="poetryExecutable" value="poetry" />
+          <param name="pythonVersion" value="python3" />
+          <param name="scriptArguments" value="--path_to_source_json_file %source% --path_to_destination_json_file %destination% --location_one %location1% --location_two %location2%" />
+          <param name="scriptFile" value="main.py" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="virtualenvEnvName" value=".venv" />
+          <param name="virtualenvFile" value="requirements.txt" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <requirements />
+  </settings>
+</meta-runner>
