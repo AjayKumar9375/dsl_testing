@@ -11,6 +11,12 @@ To apply the patch, change the buildType with id = 'feature_2'
 accordingly, and delete the patch script.
 */
 changeBuildType(RelativeId("feature_2")) {
+    params {
+        remove {
+            param("source", "json_source.json")
+        }
+    }
+
     expectSteps {
         python {
             id = "python_runner"
