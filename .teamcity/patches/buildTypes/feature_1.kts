@@ -14,10 +14,7 @@ changeBuildType(RelativeId("feature_1")) {
         add {
             notifications {
                 notifierSettings = emailNotifier {
-                    email = """
-                        pranav.govekar@kpit.com
-                        ajay.kumar@kpit.com
-                    """.trimIndent()
+                    email = "ajay.kumar@kpit.com"
                 }
                 buildFailed = true
                 buildFinishedSuccessfully = true
