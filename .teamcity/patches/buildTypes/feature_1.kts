@@ -10,15 +10,6 @@ To apply the patch, change the buildType with id = 'feature_1'
 accordingly, and delete the patch script.
 */
 changeBuildType(RelativeId("feature_1")) {
-    params {
-        expect {
-            param("source", "json_source.json")
-        }
-        update {
-            param("source", "source.json")
-        }
-    }
-
     features {
         add {
             notifications {
