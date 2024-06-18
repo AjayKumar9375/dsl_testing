@@ -29,7 +29,6 @@ changeBuildType(RelativeId("feature_2")) {
             step {
                 id = "DslTesting_Feature1"
                 type = "DslTesting_Feature1"
-                enabled = false
                 executionMode = BuildStep.ExecutionMode.DEFAULT
                 param("Organization", "KPIT")
                 param("destination", "json_destination.json")
