@@ -12,12 +12,12 @@ import jetbrains.buildServer.configs.kotlin.buildSteps.python
 //         }
 // }
 
-def create_python_step():
+def createpythonStep():
     return {
         'id': 'python_runner',
         'command': 'python',
-        'filename': 'ain.py',
-        'criptArguments': [
+        'filename': 'main.py',
+        'scriptArguments': [
             '--path_to_source_json_file', '%source%',
             '--path_to_destination_json_file', '%destination%',
             '--location_one', '%location1%',
