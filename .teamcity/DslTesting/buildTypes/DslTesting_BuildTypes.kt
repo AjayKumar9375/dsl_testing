@@ -1,6 +1,6 @@
 package DslTesting.buildTypes
 
-import DslTesting.DslBuildStep.*
+import DslTesting.DslBuildStep.createpythonStep
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildFeatures.perfmon
 import jetbrains.buildServer.configs.kotlin.buildSteps.python
@@ -39,7 +39,7 @@ class DslTesting_BuildTypes(
 
 
     steps {
-        pythonStep(scriptArg = "--path_to_source_json_file %source% --path_to_destination_json_file %destination% --location_one %location1% --location_two %location2%", fileName = "main.py")
+        createpythonStep(scriptArg = "--path_to_source_json_file %source% --path_to_destination_json_file %destination% --location_one %location1% --location_two %location2%", fileName = "main.py")
 
 
         // python {
