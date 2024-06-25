@@ -13,6 +13,7 @@ changeBuildType(RelativeId("feature_1")) {
     features {
         add {
             notifications {
+                enabled = false
                 notifierSettings = emailNotifier {
                     email = "ajay.kumar@kpit.com"
                 }
