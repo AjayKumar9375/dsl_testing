@@ -12,7 +12,7 @@ import jetbrains.buildServer.configs.kotlin.buildSteps.python
 
 
 fun createPythonStep(): BuildStep {
-    return python {
+    return {
         id = "python_runner"
         command = file {
             filename = "main.py"
