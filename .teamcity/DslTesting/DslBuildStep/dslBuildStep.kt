@@ -14,7 +14,7 @@ import jetbrains.buildServer.configs.kotlin.buildSteps.python
 //         }
 // }
 
-fun createPythonStep(): BuildStep {
+fun createPythonStep(): buildSteps {
     return python {
         id = "python_runner"
         command = file {
