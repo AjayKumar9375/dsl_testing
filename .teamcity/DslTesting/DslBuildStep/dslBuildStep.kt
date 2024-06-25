@@ -1,4 +1,4 @@
-package DslTesting.buildTypes
+package DslTesting.DslBuildStep
 
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildSteps.python
