@@ -29,9 +29,6 @@ import jetbrains.buildServer.configs.kotlin.buildSteps.python
 //     }
 // }
 
-package DslTesting.DslBuildStep
-
-import jetbrains.buildServer.configs.kotlin.v2019_2.*
 
 fun createPythonStep(): BuildStep {
     return python {
