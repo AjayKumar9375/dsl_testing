@@ -8,11 +8,5 @@ class DslTesting_BuildStep(
     filename: String, 
     scriptArguments: String) : BuildStep({
 
-//    python {
-//        this.id = id
-//        command = file {
-//            this.filename = filename
-//            this.scriptArguments = scriptArguments
-//        }
-//    }
+
 })
