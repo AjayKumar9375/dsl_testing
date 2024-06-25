@@ -3,8 +3,8 @@ package DslTesting.DslBuildStep
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildSteps.python
 import jetbrains.buildServer.configs.kotlin.buildSteps.*
-import jetbrains.buildServer.configs.kotlin.buildSteps.python.PythonCommand
-import jetbrains.buildServer.configs.kotlin.buildSteps.python.FileCommand
+
+
 // class DslTesting_BuildStep(
 //     id: String, 
 //     filename: String, 
