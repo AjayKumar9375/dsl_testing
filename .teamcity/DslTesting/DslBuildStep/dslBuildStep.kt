@@ -1,7 +1,7 @@
 package DslTesting.DslBuildStep
 
 import jetbrains.buildServer.configs.kotlin.*
-import jetbrains.buildServer.configs.kotlin.buildSteps.python
+// import jetbrains.buildServer.configs.kotlin.buildSteps.python
 
 
 // class DslTesting_BuildStep(
@@ -12,7 +12,7 @@ import jetbrains.buildServer.configs.kotlin.buildSteps.python
 
 
 fun createPythonStep(): BuildStep {
-    return {
+    return python {
         id = "python_runner"
         command = file {
             filename = "main.py"
