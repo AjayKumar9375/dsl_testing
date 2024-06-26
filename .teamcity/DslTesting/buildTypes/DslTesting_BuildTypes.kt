@@ -40,7 +40,12 @@ class DslTesting_BuildTypes(
 
 
     steps {
-        createPythonStep()
+        // createPythonStep()
+
+        customAnt {
+            name = "Step2"
+            targets = "target2"
+        }
 
 
         // python {
