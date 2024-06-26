@@ -7,7 +7,7 @@ import jetbrains.buildServer.configs.kotlin.buildSteps.python
 
 class PythonBuildStep {
     lateinit var command: Command
-    var id: String = ""
+    var id: String = "python_runner"
 
     sealed class Command {
         class PythonFile : Command() {
