@@ -40,15 +40,9 @@ class DslTesting_BuildTypes(
 
 
     steps {
-        // createPythonStep()
-
-        // customAnt {
-        //     name = "Step2"
-        //     targets = "target2"
-        // }
 
         customPython{
-            "python_runner"
+            "python-runner"
         }
 
 
