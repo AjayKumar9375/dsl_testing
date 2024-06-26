@@ -1,7 +1,6 @@
 package patches.buildTypes
 
 import jetbrains.buildServer.configs.kotlin.*
-import jetbrains.buildServer.configs.kotlin.buildSteps.PythonBuildStep
 import jetbrains.buildServer.configs.kotlin.buildSteps.python
 import jetbrains.buildServer.configs.kotlin.ui.*
 
@@ -27,10 +26,6 @@ changeBuildType(RelativeId("feature_2")) {
         }
     }
     steps {
-        update<PythonBuildStep>(0) {
-            enabled = false
-            clearConditions()
-        }
         insert(1) {
             step {
                 id = "DslTesting_Feature1"
