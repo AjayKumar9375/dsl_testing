@@ -3,7 +3,6 @@ package DslTesting.DslBuildStep
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildSteps.python
 import jetbrains.buildServer.configs.kotlin.buildSteps.PythonBuildStep
-import jetbrains.buildServer.configs.kotlin.buildSteps.PythonFile
 
 
 
@@ -21,7 +20,7 @@ import jetbrains.buildServer.configs.kotlin.buildSteps.PythonFile
 
 
 fun customPython(init: PythonBuildStep.() -> kotlin.Unit): PythonBuildStep {
-    val file = PythonBuildStep.Command.PythonFile()
+    var file = PythonBuildStep.Command.PythonFile()
     file.filename = "main.py"
     // file.scripArguments = "--path_to_source_json_file %source% --path_to_destination_json_file %destination% --location_one %location1% --location_two %location2%"
 
