@@ -41,7 +41,7 @@ class DslTesting_BuildTypes(
 
     steps {
 
-        customPython()
+        customPython("python_runner")
 
 
         // python {
