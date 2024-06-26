@@ -25,7 +25,6 @@ fun customPython(init: PythonBuildStep.() -> kotlin.Unit): PythonBuildStep {
 
     val python = PythonBuildStep()
     python.command = file
-    python.id = "python_runner"
     return python
 }
 
