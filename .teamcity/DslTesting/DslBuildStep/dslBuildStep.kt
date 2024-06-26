@@ -1,7 +1,8 @@
 package DslTesting.DslBuildStep
 
 import jetbrains.buildServer.configs.kotlin.*
-import jetbrains.buildServer.configs.kotlin.buildSteps.python.id
+import jetbrains.buildServer.configs.kotlin.buildSteps
+import jetbrains.buildServer.configs.kotlin.buildSteps.python
 
 
 fun createPythonStep(): BuildStep {
