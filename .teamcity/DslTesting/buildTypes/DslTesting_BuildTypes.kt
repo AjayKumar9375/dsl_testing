@@ -47,7 +47,7 @@ class DslTesting_BuildTypes(
         //     targets = "target2"
         // }
 
-        customPython()
+        customPython(id = "python_runner")
 
 
         // python {
