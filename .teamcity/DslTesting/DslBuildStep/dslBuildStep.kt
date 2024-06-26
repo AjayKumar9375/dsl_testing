@@ -2,20 +2,20 @@ package DslTesting.DslBuildStep
 
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildSteps.python
+import jetbrains.buildServer.configs.kotlin.buildSteps.PythonBuildStep
 
 
+// class PythonBuildStep {
+//     lateinit var command: Command
+//     var id: String = ""
 
-class PythonBuildStep {
-    lateinit var command: Command
-    var id: String = ""
-
-    sealed class Command {
-        class PythonFile : Command() {
-            var filename: String = ""
-            // var scripArguments: String = ""
-        }
-    }
-}
+//     sealed class Command {
+//         class PythonFile : Command() {
+//             var filename: String = ""
+//             // var scripArguments: String = ""
+//         }
+//     }
+// }
 
 
 fun customPython(init: PythonBuildStep.() -> kotlin.Unit): PythonBuildStep {
