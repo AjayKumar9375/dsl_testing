@@ -8,7 +8,7 @@ import jetbrains.buildServer.configs.kotlin.triggers.vcs
 
 import kotlin.collections.listOf
 object Project : Project({
-    id("DslTesting")
+    id("F_DslTesting")
     name = "Dsl Testing"
 
     vcsRoot(DslTesting_HttpsGithubComAjayKumar9375dslTestingGitRefsHeadsMain)
